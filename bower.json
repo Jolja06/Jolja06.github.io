@@ -1,0 +1,12 @@
+{
+  "name": "angular-calc-test",
+  "authors": [
+    "Elena Anischenkova <elena-an-92@yandex.ru>"
+  ],
+  "description": "The test task for GelioSoft",
+  "homepage": "https://github.com/Jolja06/Jolja06.github.io",
+  "dependencies": {
+    "angular": "~1.5.8",
+    "normalize-css": "~4.2.0"
+  }
+}

@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+.app {
+  width: 60%;
+  margin: auto;
+  min-width: 500px;
+}
+
+.prod__form {
+  margin-bottom: 25px;
+}
+
+.input__num {
+  width: 50px;
+  text-align: center;
+}
+
+.basket__table {
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border: 1px solid #f1f1f1;
+}
+
+tr {
+  border-top: 1px solid #f1f1f1;
+}
+
+tr:nth-child(odd) {
+  background: #ececec;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+td {
+  border-left: 1px solid #f1f1f1;
+
+}
+
+td:first-child {
+  border-left: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GelioSoft Test</title>
+  <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="bower/angular/angular.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/discountCtrl.js"></script>
+</head>
+<body>
+  <body>
+    <div class="app" ng-app="calcApp" ng-controller="ProdCtrl">
+      <h1 class="app__title">Добавить продукт</h1>
+      <form role="form" name="productForm" class="prod__form" novalidate>
+        <label for="new-prod" class="prod__label">Продукт</label>
+        <input type="text" name="name" class="prod__input" id="new-prod" ng-model="newProd.name" required >
+        <label for="price" class="prod__label">Цена</label>
+        <input type="number" name="price" class="input__num" id="price" ng-model="newProd.price" min='1' required >
+        <button class="form__btn add__btn" ng-click="addNewProd()" type="button" ng-disabled="productForm.$invalid">Добавить</button>
+      </form>
+      <hr>
+          
+      <h1 class="basket__title">Корзина</h1>
+      <table class="basket__table" cellpadding="10px">
+        <tr>
+          <td>Продукт</td>
+          <td>Цена</td>
+          <td>Цена со скидкой</td>
+        </tr>
+        <tr ng-repeat="product in products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.sale }}</td>
+        </tr>
+      </table>
+
+          <label for="discount" class="basket__label">Применить скидку</label>
+          <input type="number" ng-model="discount" class="input__num" > руб.
+          <button class="basket__btn" ng-click="discounApply()">Применить</button>
+    </div>
+</body>
+</html>

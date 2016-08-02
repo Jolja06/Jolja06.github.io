@@ -1,0 +1,13 @@
+{
+  "name": "angular-calc",
+  "version": "1.0.0",
+  "description": "The test task for GelioSoft",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/Jolja06/Jolja06.github.io"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elena Anischenkova <elena-an-92@yandex.ru>",
+}
