@@ -1,1 +1,4 @@
-angular.module('calcApp', []);
+(function(){
+  angular
+    .module('calcApp', ['discount.service', 'products.ctrl']);
+})();

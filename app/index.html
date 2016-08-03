@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru RU">
+<html lang="ru RU" ng-app="calcApp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
@@ -15,12 +15,13 @@
   <!-- endbuild -->
   <!-- build:js scripts/main.js -->
   <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/discountCtrl.js"></script>
+  <script src="scripts/controllers/products.ctrl.js"></script>
+  <script src="scripts/services/discount.service.js"></script>
   <!-- endbuild -->
 </head>
 <body>
   <body>
-    <div class="app" ng-app="calcApp" ng-controller="ProdCtrl">
+    <div class="app" ng-controller="ProdCtrl">
       <h1 class="app__title">Добавить продукт</h1>
       <form role="form" name="productForm" class="prod__form" novalidate>
         <label for="new-prod" class="prod__label">Продукт</label>
