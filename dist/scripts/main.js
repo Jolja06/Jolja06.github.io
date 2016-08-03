@@ -1,3 +1,4 @@
+angular.module('calcApp', []);
 angular.module('calcApp').controller('ProdCtrl', function($scope) {
   
   // Инициализация скидки
