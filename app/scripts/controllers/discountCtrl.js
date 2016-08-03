@@ -5,6 +5,9 @@ angular.module('calcApp').controller('ProdCtrl', function($scope) {
   
   // Инициализация товаров
   $scope.products = [
+  {name: 1, price:100, sale: 100},
+  {name: 2, price:100, sale: 100},
+  {name: 3, price:100, sale: 100},
   ];
 
   // Функцию, которая отвечает за добавление товара  
@@ -36,17 +39,20 @@ angular.module('calcApp').controller('ProdCtrl', function($scope) {
     }, 0); 
 
     // Поиск индекса товара с самой высокой ценой 
-    for( var a = 0; a < number.length; a++ ) {
-      var emax = number[a];
-      if(number[a] < emax) {
-        emax = number[a];
-      }
-    }
+    var emax = Math.max.apply(null, number);
 
     // Замена значения скидки для самого дорогого товара, 
     // оставшаяся после округления, чтобы в итоге была скидка равная $scope.discount = 7;
-    number[emax] = number[emax] + ($scope.discount - sale);
+    var a = 0;
+    var index = 0;
+    for ( a; a < number.length; a++) {
+      if(number[a] === emax) {
+        index = a;
+      } 
+    }
     
+    number[index] = emax + ($scope.discount - sale);
+
     // Вывод скидки для каждого товара
     for( var m = 0; m < $scope.products.length; m++ ) {
       var sale = $scope.products[m].sale;
